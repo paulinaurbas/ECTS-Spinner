@@ -7,5 +7,5 @@ University project from Computer Graphics.
  Android 
  ## Team
  - Michał Herjan
- - Franciszek Pogodziński
+ - Franek Pogodziński
  - Paulina Urbaś
