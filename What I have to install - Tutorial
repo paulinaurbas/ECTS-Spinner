@@ -1,4 +1,4 @@
-# Jak zrobić żeby działo na telefonie 
+** Jak zrobić żeby działo na telefonie 
 ## Support Androida dla Unity
 File->Build Settings, if I select Android, it says "No Android Module Loaded" to wtedy trzeba ściągnac wsparcie platformy 
 ## Samo środowisko ze strony. 
