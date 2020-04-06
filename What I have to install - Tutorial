@@ -1,11 +1,20 @@
 Jak zrobić żeby działo na telefonie?
+
 1. Support Androida dla Unity
 File->Build Settings, if I select Android, it says "No Android Module Loaded" to wtedy trzeba ściągnac wsparcie platformy 
+
 2. Samo środowisko ze strony Android Studio
 Potem konfiguracja taka jak jest tutaj, ale ja instalowałam: 7.0, 7.1, 8.0, zmieniłam nam już platformę więc powinno działać
-https://www.youtube.com/watch?v=WDpO5PmDANw 
+https://www.youtube.com/watch?v=WDpO5PmDANw
+
 3. Telefon 
 Trzeba zainstalować Unity Remote 5 z Google Play
 
-Jak wciśniemy play w Unity to będzie działać
+4. Unity 
+- konfiguracja w unity  
+Edit -> Project Setting -> Editor -> Device -> Any Android Device 
+Edit -> Project Setting -> Editor -> Joystick Source -> Remote
+- jak nie działa to w takiej kolejności trzeba to robić: 
+https://stackoverflow.com/questions/45402965/unity-remote-5-not-working
+- Jak wciśniemy play w Unity to będzie działać
 
