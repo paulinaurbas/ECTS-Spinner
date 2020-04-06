@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Accelometer : MonoBehaviour
 {
+    // Start is called before the first frame update
     private Rigidbody rigidbody;
     public bool isFlat = true;
     private void Start()
