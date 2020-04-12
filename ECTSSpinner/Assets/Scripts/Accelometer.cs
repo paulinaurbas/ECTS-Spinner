@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(CharacterController))]
 public class Accelometer : MonoBehaviour
 {
  
@@ -53,6 +54,8 @@ public class Accelometer : MonoBehaviour
     void Update()
     {
         AccelometrMove();
+     
+        
     }
 
 
