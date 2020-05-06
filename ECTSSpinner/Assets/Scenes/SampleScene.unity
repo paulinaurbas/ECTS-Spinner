@@ -819,6 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ECTSPoints: 0
+  ECTSPointsText: {fileID: 214325734}
 --- !u!23 &1658771047
 MeshRenderer:
   m_ObjectHideFlags: 0
