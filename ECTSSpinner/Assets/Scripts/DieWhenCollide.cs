@@ -14,8 +14,12 @@ public class DieWhenCollide: MonoBehaviour
     {
         if (collision.gameObject.name == "Ball")
         {
-            Destroy(collision.gameObject);
             // TODO: Add dying fireworks
+            // TODO: Transfer the scene to some MENU without the ball 
+            //       and the accelerometr script. It collapses in this 
+            //       version due to the fact that it tries to change 
+            //       position of the ball even if it is destroyed
+            Destroy(collision.gameObject);
         }
     }
 

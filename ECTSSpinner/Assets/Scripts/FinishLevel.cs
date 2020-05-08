@@ -14,10 +14,11 @@ public class FinishLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Ball")
         {
+            // TODO: Transfer the scene to some MENU without the ball 
+            //       and the accelerometr script. It collapses in this 
+            //       version due to the fact that it tries to change 
+            //       position of the ball even if it is destroyed
             Destroy(collision.gameObject);
-            // TODO: Do not destroy the ball, move it to the start position
-            //       Regenerate the level, change colors and things like that
-            //       OR just change the scene!
         }
     }
 
