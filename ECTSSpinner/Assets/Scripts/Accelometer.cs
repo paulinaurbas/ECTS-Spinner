@@ -9,11 +9,13 @@ public class Accelometer : MonoBehaviour
 {
  
     private Rigidbody rb;
-    private int ballSpeed = 2;
+    public float ballSpeed = 0;
     private float forwardSpeed = 20.0f;
-
+    private GameObject _cylinder;
     void Start()
     {
+        _cylinder = GameObject.FindGameObjectWithTag("cylinderMain");
+        ballSpeed = ballSpeed / 100;
         rb = GetComponent<Rigidbody>();
 
     }
@@ -43,12 +45,14 @@ public class Accelometer : MonoBehaviour
 
     private void MoveRight()
     {
-        rb.velocity = new Vector3(ballSpeed,0, forwardSpeed);
+          rb.velocity = new Vector3(0,0, forwardSpeed);
+        _cylinder.transform.RotateAround(new Vector3(0, 0, 1), ballSpeed);
     }
 
     private void MoveLeft()
     {
-        rb.velocity = new Vector3(-ballSpeed, 0, forwardSpeed);
+        rb.velocity = new Vector3(0, 0, forwardSpeed);
+        _cylinder.transform.RotateAround(new Vector3(0, 0, 1), -ballSpeed);
     }
 
     void Update()
