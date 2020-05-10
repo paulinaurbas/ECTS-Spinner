@@ -736,10 +736,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+
   m_Texture: {fileID: 2800000, guid: 6f7f07cd3758b944fa7dfc72fc3eb707, type: 3}
   m_UVRect:
     serializedVersion: 2
@@ -747,6 +749,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+
 --- !u!222 &864301110
 CanvasRenderer:
   m_ObjectHideFlags: 0
