@@ -8,7 +8,7 @@ public class SpawnObstacles : MonoBehaviour
     private GameObject _cylinder;
     private Bounds _cylinderBounds;
     private float _radius;
-    private List<GameObject> _objectsList; //TO DO?
+    public List<GameObject> objectsList = new List<GameObject>(); //TO DO?
 
     public int amountOfObstacles = 1;
     public GameObject cube;
@@ -26,15 +26,37 @@ public class SpawnObstacles : MonoBehaviour
     {
         for (int i = 0; i < amountOfObstacles; i++)
         {
+            bool obstacleIntersects = false;
+
             float angle = UnityEngine.Random.Range(0, 360);
             float posZ = UnityEngine.Random.Range(_cylinderBounds.min.z, _cylinderBounds.max.z);
             float posX = _radius * (float)Math.Cos(angle);
             float posY = _radius * (float)Math.Sin(angle);
             float size = UnityEngine.Random.Range(1, 5);
 
-            cube.name = "obstacleCube_" + i.ToString();
+            var newObstacle = Instantiate(cube, new Vector3(posX, posY, posZ), Quaternion.AngleAxis(angle, new Vector3(0, 0, 1)));
+            newObstacle.transform.localScale = new Vector3(size, size, size);
+            newObstacle.name ="obstacleCube_" + i.ToString();
 
-            Instantiate(cube, new Vector3(posX, posY, posZ), Quaternion.AngleAxis(angle, new Vector3(0, 0, 1))).transform.localScale = new Vector3(size, size, size);
+            do //Prevent cubes from spawning inside eachother
+            {
+                foreach (GameObject item in objectsList)
+                {
+                    if (item.GetComponent<BoxCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds))
+                    {
+                        angle = UnityEngine.Random.Range(0, 360);
+                        posZ = UnityEngine.Random.Range(_cylinderBounds.min.z, _cylinderBounds.max.z);
+                        posX = _radius * (float)Math.Cos(angle);
+                        posY = _radius * (float)Math.Sin(angle);
+
+                        newObstacle.transform.position = new Vector3(posX, posY, posZ);
+                        obstacleIntersects = true;
+                    }
+                }
+                   
+            } while (obstacleIntersects);
+
+            objectsList.Add(newObstacle);
         }
     }
 
