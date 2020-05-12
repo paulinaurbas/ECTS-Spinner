@@ -36,6 +36,7 @@ public class SpawnObstacles : MonoBehaviour
 
             var newObstacle = Instantiate(cube, new Vector3(posX, posY, posZ), Quaternion.AngleAxis(angle, new Vector3(0, 0, 1)));
             newObstacle.transform.localScale = new Vector3(size, size, size);
+            newObstacle.transform.parent = _cylinder.transform;
             newObstacle.name ="obstacleCube_" + i.ToString();
 
             do //Prevent cubes from spawning inside eachother

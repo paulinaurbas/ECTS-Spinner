@@ -40,6 +40,7 @@ public class SpawnECTSs : MonoBehaviour
             float posY = _radius * (float)Math.Sin(angle);
 
             var newECTS = Instantiate(ECTS, new Vector3(posX, posY, posZ), Quaternion.AngleAxis(angle, new Vector3(0, 0, 1)));
+            newECTS.transform.parent = _cylinder.transform;
             newECTS.name = "ECTSPoint_" + i.ToString();
             newECTS.tag = "ECTS";
 
