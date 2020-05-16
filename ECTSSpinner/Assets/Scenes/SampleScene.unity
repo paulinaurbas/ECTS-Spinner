@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 1658771045}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -889,7 +889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658771044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 7.84, z: -107.12}
+  m_LocalPosition: {x: -0.02, y: 7.761, z: -107.12}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1097,9 +1097,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036501214}
-  - component: {fileID: 2036501213}
-  - component: {fileID: 2036501212}
   - component: {fileID: 2036501216}
+  - component: {fileID: 2036501212}
+  - component: {fileID: 2036501213}
   - component: {fileID: 2036501215}
   m_Layer: 0
   m_Name: EventSystem
@@ -1165,11 +1165,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2036501211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d50967a80f0c494cac9b1917201a4ff, type: 3}
+  m_Script: {fileID: 11500000, guid: a48eff7d2589c06489723c6354af636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles: {fileID: 2036501216}
-  ECTS: {fileID: 1186902942}
+  baseECTS: {fileID: 1186902942}
 --- !u!114 &2036501216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,6 +1181,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6d642ca24df3440a61babf3f044292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsList: []
-  amountOfObstacles: 100
-  cube: {fileID: 667470430}
+  baseObstacle: {fileID: 667470430}
+  numberOfObstacles: 100
