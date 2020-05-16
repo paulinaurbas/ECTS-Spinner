@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FinishLevel : MonoBehaviour
 {
+    private GenerateNewLevel _newLevel = new GenerateNewLevel();
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,10 @@ public class FinishLevel : MonoBehaviour
             //       and the accelerometr script. It collapses in this 
             //       version due to the fact that it tries to change 
             //       position of the ball even if it is destroyed
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            _newLevel.DestroyAllGameObjects();
+            _newLevel.MovePlayerToStart();
+            _newLevel.GenerateNextLevel();       
         }
     }
 

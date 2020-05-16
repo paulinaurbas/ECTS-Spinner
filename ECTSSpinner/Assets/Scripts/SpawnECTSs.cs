@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnObstacles : MonoBehaviour
+public class SpawnECTSs : MonoBehaviour
 {
-    private GenerateObstacles _generator = GenerateObstacles.Instance;
-    public GameObject baseObstacle;
-    public int numberOfObstacles;
+    private GenerateECTSs _generator = GenerateECTSs.Instance;
+    public GameObject baseECTS;
     // Start is called before the first frame update
     void Start()
     {
-
         _generator.cylinder = GameObject.FindGameObjectWithTag("cylinderMain");
-        _generator.baseObject = baseObstacle;
-        _generator.numberOfInstances = numberOfObstacles;
+        _generator.baseObject = baseECTS;
 
         _generator.InitializeGameObjects();
     }

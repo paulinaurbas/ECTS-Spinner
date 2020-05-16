@@ -17,7 +17,7 @@ public class CollectECTSPoint : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "ECTSPoint")
+        if(collision.gameObject.CompareTag("ECTS"))
         {
             Destroy(collision.gameObject);
             // TODO: Add fireworks effects 
