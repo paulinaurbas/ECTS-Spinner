@@ -17,7 +17,7 @@ public class GenerateECTSs : IGenerator
     private float _range;
     public GameObject baseObject { get; set; }
     public List<GameObject> listOfInstances { get; set; }
-
+    public Destroyer destroyer { get; set; }
     private GenerateECTSs()
     {
         listOfInstances = new List<GameObject>();
@@ -25,7 +25,7 @@ public class GenerateECTSs : IGenerator
 
     public static GenerateECTSs Instance
     {
-        get { return _instance;  }
+        get { return _instance; }
     }
 
     public IGenerator GetInstance()
@@ -44,7 +44,6 @@ public class GenerateECTSs : IGenerator
 
         for (int i = 0; i < numberOfInstances; i++)
         {
-            bool ECTSIntersects = false;
 
             float angle = UnityEngine.Random.Range(0, 360);
             float posZ = _range * i + cylinderBounds.min.z + 10;
@@ -59,23 +58,16 @@ public class GenerateECTSs : IGenerator
 
             listOfInstances.Add(newECTS);
 
-            do //Prevent ECTS from spawning inside the Obstacles
+            //Prevent ECTS from spawning inside the Obstacles
+            foreach (GameObject item in _obstacles.listOfInstances)
             {
-                foreach (GameObject item in _obstacles.listOfInstances)
+                if (item.GetComponent<BoxCollider>().bounds.Intersects(newECTS.GetComponent<CapsuleCollider>().bounds))
                 {
-                    if (item.GetComponent<BoxCollider>().bounds.Intersects(newECTS.GetComponent<CapsuleCollider>().bounds))
-                    {
-                        angle = UnityEngine.Random.Range(0, 360);
-                        posZ += 2;
-                        posX = radius * (float)Math.Cos(angle);
-                        posY = radius * (float)Math.Sin(angle);
+                    _obstacles.listOfInstances.RemoveAt(_obstacles.listOfInstances.IndexOf(item));
 
-                        newECTS.transform.position = new Vector3(posX, posY, posZ);
-                        ECTSIntersects = true;
-                    }
+                    destroyer.DestroyObject(item);
                 }
-
-            } while (ECTSIntersects);
+            }
         }
     }
 }

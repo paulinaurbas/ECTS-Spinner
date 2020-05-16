@@ -11,7 +11,7 @@ public class GenerateObstacles : IGenerator
     public List<GameObject> listOfInstances { get; set; }
     public int numberOfInstances { get; set; }
     public GameObject baseObject { get; set; }
-
+    public Destroyer destroyer { get; set; }
     private GenerateObstacles()
     {
         listOfInstances = new List<GameObject>();
@@ -48,25 +48,15 @@ public class GenerateObstacles : IGenerator
             newObstacle.transform.parent = cylinder.transform;
             newObstacle.name = "obstacleCube_" + i.ToString();
 
-            do //Prevent cubes from spawning inside eachother
+            //Prevent cubes from spawning inside eachother
+            if (player.GetComponent<CapsuleCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds))
             {
-                foreach (GameObject item in listOfInstances)
-                {
-                    if (item.GetComponent<BoxCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds) || player.GetComponent<CapsuleCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds))
-                    {
-                        angle = UnityEngine.Random.Range(0, 360);
-                        posZ = UnityEngine.Random.Range(cylinderBounds.min.z, cylinderBounds.max.z);
-                        posX = radius * (float)Math.Cos(angle);
-                        posY = radius * (float)Math.Sin(angle);
+                destroyer.DestroyObject(newObstacle);
+                obstacleIntersects = true;
+            }
 
-                        newObstacle.transform.position = new Vector3(posX, posY, posZ);
-                        obstacleIntersects = true;
-                    }
-                }
-
-            } while (obstacleIntersects);
-
-            listOfInstances.Add(newObstacle);
+            if(obstacleIntersects == false)
+                listOfInstances.Add(newObstacle);
         }
     }
 }

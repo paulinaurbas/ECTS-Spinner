@@ -38,6 +38,12 @@ public interface IGenerator
         get;
         set;
     }
+
+    Destroyer destroyer
+    {
+        get;
+        set;
+    }
     void InitializeGameObjects();
     IGenerator GetInstance();
 }
