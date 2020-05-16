@@ -33,6 +33,12 @@ public interface IGenerator
         set;
     }
 
+    Destroyer destroyer
+    {
+        get;
+        set;
+    }
+
     List<GameObject> listOfInstances
     {
         get;
