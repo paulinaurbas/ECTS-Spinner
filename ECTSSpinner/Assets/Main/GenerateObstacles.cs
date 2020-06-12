@@ -29,6 +29,8 @@ public class GenerateObstacles : IGenerator
 
     public void InitializeGameObjects()
     {
+        baseObject = SpawnObstacles.baseObstacle;
+
         cylinderBounds = cylinder.GetComponent<MeshCollider>().bounds;
         radius = (cylinderBounds.max.x - cylinderBounds.min.x) / 2;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -45,7 +47,10 @@ public class GenerateObstacles : IGenerator
 
             var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX + 0.5f, posY, posZ), new Quaternion(-90, -180, angle, 0));
             newObstacle.transform.localScale = new Vector3(size, size, size);
+
+            var objectSize3D = baseObject.transform.localScale;
             newObstacle.transform.parent = GameObject.FindGameObjectWithTag("Arena").transform;
+            newObstacle.transform.localScale = objectSize3D;
             newObstacle.name = "obstacle_" + i.ToString();
 
             //Prevent cubes from spawning inside eachother

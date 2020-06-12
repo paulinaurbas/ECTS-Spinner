@@ -23,7 +23,7 @@ public class FinishLevel : MonoBehaviour
             _newLevel.DestroyAllGameObjects();
             _newLevel.MovePlayerToStart();
             //Goto next-level-screen/summary
-            _newLevel.GenerateNextLevel();       
+            _newLevel.GenerateNextLevel();    
         }
     }
 
