@@ -12,11 +12,14 @@ public class Accelometer : MonoBehaviour
     public float ballSpeed = 0;
     private float forwardSpeed = 20.0f;
     private GameObject _cylinder;
+    private GameObject _background;
+
     void Start()
     {
         _cylinder = GameObject.FindGameObjectWithTag("cylinderMain");
         ballSpeed = ballSpeed / 100;
         rb = GetComponent<Rigidbody>();
+        _background = GameObject.FindGameObjectWithTag("Background");
 
     }
     void AccelometrMove()
@@ -41,6 +44,7 @@ public class Accelometer : MonoBehaviour
     private void SetVelocityZero()
     {
         rb.velocity = new Vector3(0, 0, forwardSpeed);
+        _background.transform.position = new Vector3(0, 0, rb.position.z + 400);
     }
 
     private void MoveRight()

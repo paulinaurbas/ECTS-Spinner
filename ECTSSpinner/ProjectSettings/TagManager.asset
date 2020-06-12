@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - cylinderMain
   - ECTS
+  - Background
+  - Arena
   layers:
   - Default
   - TransparentFX

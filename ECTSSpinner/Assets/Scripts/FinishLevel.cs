@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FinishLevel : MonoBehaviour
 {
-    private GenerateNewLevel _newLevel = new GenerateNewLevel();
+    private readonly GenerateNewLevel _newLevel = new GenerateNewLevel();
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class FinishLevel : MonoBehaviour
             //Destroy(collision.gameObject);
             _newLevel.DestroyAllGameObjects();
             _newLevel.MovePlayerToStart();
+            //Goto next-level-screen/summary
             _newLevel.GenerateNextLevel();       
         }
     }
