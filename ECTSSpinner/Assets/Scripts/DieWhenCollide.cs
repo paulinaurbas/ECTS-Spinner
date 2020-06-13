@@ -20,6 +20,7 @@ public class DieWhenCollide: MonoBehaviour
             //       version due to the fact that it tries to change 
             //       position of the ball even if it is destroyed
             //Destroy(collision.gameObject);
+            Application.LoadLevel("LooseGame");
             collision.gameObject.SetActive(false);
         }
     }
