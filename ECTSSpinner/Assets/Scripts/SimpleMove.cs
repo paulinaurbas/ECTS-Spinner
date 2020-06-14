@@ -6,7 +6,7 @@ public class SimpleMove : MonoBehaviour
 {
     private Rigidbody rigidBody;
     public float horizontalSpeed = 0.5f;
-    public float verticalSpeed = 2.0f;
+    public float verticalSpeed = 5.0f;
     private GameObject _cylinder;
 
     private void Start()

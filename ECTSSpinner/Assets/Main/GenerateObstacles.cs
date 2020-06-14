@@ -32,8 +32,35 @@ public class GenerateObstacles : IGenerator
 
         switch (GenerateNewLevel.levelNumber)
         {
-            case 0:
+            case 0: //UMBRELLA
                 adjustedScale = new Vector3(0.01777778f * 16, 0.008888894f * 16, 0.0003f * 16);
+                break;
+            case 1: //BURGER
+                adjustedScale = new Vector3(1.555556f * 14, 1.555556f * 14, 0.03f * 14);
+                break;
+            case 2: //BOOK
+                adjustedScale = new Vector3(0.2844445f, 0.05f, 0.0058f);
+                break;
+            case 3: //DMUX
+                adjustedScale = new Vector3(0.01777778f * 8, 0.008888894f * 8, 0.0003f * 8);
+                break;
+            case 4: //PENGUIN
+                adjustedScale = new Vector3(0.01777778f * 4, 0.008888894f * 4, 0.0003f * 4);
+                break;
+            case 5: //C#
+                adjustedScale = new Vector3(35.554f * 10, 27.777788f * 10, 6f * 3);
+                break;
+            case 6: //RESISTOR
+                adjustedScale = new Vector3(0.01777778f * 60, 0.008888894f * 60, 0.0003f * 60);
+                break;
+            case 7: //COMPUTER
+                adjustedScale = new Vector3(0.01777778f * 20, 0.008888894f * 20, 0.0003f * 20);
+                break;
+            case 8: //APPLE
+                adjustedScale = new Vector3(0.3555556f * 100, 0.377779f * 100, 0.006f * 100);
+                break;
+            case 9: //ANDROID
+                adjustedScale = new Vector3(0.3555556f * 120, 0.377779f * 120, 0.006f * 120);
                 break;
         }
 
@@ -45,7 +72,7 @@ public class GenerateObstacles : IGenerator
         baseObject = SpawnObstacles.baseObstacle;
 
         cylinderBounds = cylinder.GetComponent<MeshCollider>().bounds;
-        radius = (cylinderBounds.max.x - cylinderBounds.min.x) / 2;
+        radius = 7.5f; //Tested radius - for some f-up reason it grew
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         for (int i = 0; i < numberOfInstances; i++)
@@ -56,12 +83,11 @@ public class GenerateObstacles : IGenerator
             float posZ = UnityEngine.Random.Range(cylinderBounds.min.z, cylinderBounds.max.z);
             float posX = radius * (float)Math.Cos(angle);
             float posY = radius * (float)Math.Sin(angle);
-            float size = UnityEngine.Random.Range(1, 2);
 
-            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX + 0.5f, posY, posZ), Quaternion.identity);
+            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX, posY, posZ), Quaternion.identity);
 
-            newObstacle.transform.RotateAround(new Vector3(0, 0, 1), -angle);
             newObstacle.transform.parent = cylinder.transform;
+            //newObstacle.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0, 0, 1), angle);
             newObstacle.transform.localScale = AdjustScale(); 
             
             
