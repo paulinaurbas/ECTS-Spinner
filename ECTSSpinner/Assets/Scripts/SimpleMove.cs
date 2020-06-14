@@ -5,8 +5,14 @@ using System.Collections;
 public class SimpleMove : MonoBehaviour
 {
     private Rigidbody rigidBody;
-    public float horizontalSpeed = 1.0f;
-    public float verticalSpeed = 5.0f;
+    public float horizontalSpeed = 0.5f;
+    public float verticalSpeed = 2.0f;
+    private GameObject _cylinder;
+
+    private void Start()
+    {
+        _cylinder = GameObject.FindGameObjectWithTag("cylinderMain");
+    }
     void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
@@ -14,7 +20,8 @@ public class SimpleMove : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal") * horizontalSpeed;
         float vertical = verticalSpeed;
 
-        transform.Rotate(new Vector3(vertical, 0, horizontal));
-        controller.SimpleMove(new Vector3(horizontal, 0.0f, vertical));
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, vertical);
+        _cylinder.transform.RotateAround(new Vector3(0, 0, 1), horizontal);
+        //controller.SimpleMove(new Vector3(horizontal, 0.0f, vertical));
     }
 }

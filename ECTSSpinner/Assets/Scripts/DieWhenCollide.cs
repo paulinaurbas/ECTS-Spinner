@@ -22,6 +22,7 @@ public class DieWhenCollide: MonoBehaviour
             //Destroy(collision.gameObject);
             Application.LoadLevel("LooseGame");
             collision.gameObject.SetActive(false);
+            GenerateNewLevel.levelNumber = 0;
         }
     }
 

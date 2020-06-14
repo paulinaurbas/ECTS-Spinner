@@ -46,11 +46,9 @@ public class GenerateObstacles : IGenerator
             float size = UnityEngine.Random.Range(1, 2);
 
             var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX + 0.5f, posY, posZ), new Quaternion(-90, -180, angle, 0));
-            newObstacle.transform.localScale = new Vector3(size, size, size);
-
-            var objectSize3D = baseObject.transform.localScale;
-            newObstacle.transform.parent = GameObject.FindGameObjectWithTag("Arena").transform;
-            newObstacle.transform.localScale = objectSize3D;
+            newObstacle.transform.parent = baseObject.transform.parent;
+            //newObstacle.transform.parent = cylinder.transform;
+            
             newObstacle.name = "obstacle_" + i.ToString();
 
             //Prevent cubes from spawning inside eachother

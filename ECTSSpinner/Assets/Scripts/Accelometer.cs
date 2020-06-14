@@ -19,7 +19,6 @@ public class Accelometer : MonoBehaviour
         _cylinder = GameObject.FindGameObjectWithTag("cylinderMain");
         ballSpeed = ballSpeed / 100;
         rb = GetComponent<Rigidbody>();
-        _background = GameObject.FindGameObjectWithTag("Background");
 
     }
     void AccelometrMove()
