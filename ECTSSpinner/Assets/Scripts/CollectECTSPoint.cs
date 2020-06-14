@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CollectECTSPoint : MonoBehaviour
 {
 
-    public int ECTSPoints;
+    public static int ECTSPoints;
     public Text ECTSPointsText;
 
     // Start is called before the first frame update

@@ -9,6 +9,7 @@ public class GenerateNewLevel
     private GenerateObstacles _obstacles = GenerateObstacles.Instance;
     private Destroyer _destroyer = new Destroyer();
     public static int levelNumber = 0;
+   
 
     public void DestroyAllGameObjects() //I AM THE CATACLYSM
     {

@@ -12,8 +12,8 @@ public class CollectedECTS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ectsCollectedText.text = PlayerPrefs.GetInt("ECTSPoints").ToString();
-
+        ectsCollectedText.text = CollectECTSPoint.ECTSPoints.ToString();
+        CollectECTSPoint.ECTSPoints = 0; 
     }
 
     // Update is called once per frame
