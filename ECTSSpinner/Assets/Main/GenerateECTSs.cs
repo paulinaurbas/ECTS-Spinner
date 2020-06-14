@@ -63,9 +63,10 @@ public class GenerateECTSs : IGenerator
             {
                 if (item.GetComponent<BoxCollider>().bounds.Intersects(newECTS.GetComponent<CapsuleCollider>().bounds))
                 {
-                    _obstacles.listOfInstances.RemoveAt(_obstacles.listOfInstances.IndexOf(item));
+                    item.active = false;
+                    //_obstacles.listOfInstances.RemoveAt(_obstacles.listOfInstances.IndexOf(item));
 
-                    destroyer.DestroyObject(item);
+                    //destroyer.DestroyObject(item);
                 }
             }
         }

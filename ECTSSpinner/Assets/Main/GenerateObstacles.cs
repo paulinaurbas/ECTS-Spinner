@@ -26,6 +26,19 @@ public class GenerateObstacles : IGenerator
         get { return _instance; }
     }
 
+    private Vector3 AdjustScale()
+    {
+        Vector3 adjustedScale = new Vector3(1,1,1);
+
+        switch (GenerateNewLevel.levelNumber)
+        {
+            case 0:
+                adjustedScale = new Vector3(0.01777778f * 16, 0.008888894f * 16, 0.0003f * 16);
+                break;
+        }
+
+        return adjustedScale;
+    }
 
     public void InitializeGameObjects()
     {
@@ -45,9 +58,12 @@ public class GenerateObstacles : IGenerator
             float posY = radius * (float)Math.Sin(angle);
             float size = UnityEngine.Random.Range(1, 2);
 
-            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX + 0.5f, posY, posZ), new Quaternion(-90, -180, angle, 0));
-            newObstacle.transform.parent = baseObject.transform.parent;
-            //newObstacle.transform.parent = cylinder.transform;
+            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX + 0.5f, posY, posZ), Quaternion.identity);
+
+            newObstacle.transform.RotateAround(new Vector3(0, 0, 1), -angle);
+            newObstacle.transform.parent = cylinder.transform;
+            newObstacle.transform.localScale = AdjustScale(); 
+            
             
             newObstacle.name = "obstacle_" + i.ToString();
 
