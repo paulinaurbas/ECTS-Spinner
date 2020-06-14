@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1611,7 +1611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6781ad8765a7f374991cd6e574908b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ECTSPoints: 0
   ECTSPointsText: {fileID: 0}
 --- !u!4 &1033788519 stripped
 Transform:
@@ -2443,7 +2442,7 @@ GameObject:
   - component: {fileID: 1658771050}
   - component: {fileID: 1658771051}
   - component: {fileID: 1658771045}
-  - component: {fileID: 1658771046}
+  - component: {fileID: 1658771054}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -2463,22 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6781ad8765a7f374991cd6e574908b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ECTSPoints: 0
   ECTSPointsText: {fileID: 214325734}
---- !u!114 &1658771046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658771044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7e5e414ba813ab4886f0371a749ffb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalSpeed: 1
-  verticalSpeed: 5
 --- !u!23 &1658771047
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2599,6 +2583,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &1658771054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658771044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aac635339bea4944b5b3619b897104b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSpeed: 2
 --- !u!1 &1719669790
 GameObject:
   m_ObjectHideFlags: 0

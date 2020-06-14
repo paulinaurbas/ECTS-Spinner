@@ -43,7 +43,7 @@ public class Accelometer : MonoBehaviour
     private void SetVelocityZero()
     {
         rb.velocity = new Vector3(0, 0, forwardSpeed);
-        _background.transform.position = new Vector3(0, 0, rb.position.z + 400);
+      //  _background.transform.position = new Vector3(0, 0, rb.position.z + 400);
     }
 
     private void MoveRight()
