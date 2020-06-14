@@ -19,7 +19,7 @@ public class CollectECTSPoint : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("ECTS"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             // TODO: Add fireworks effects 
             ECTSPoints++;
             ECTSPointsText.text = "POINTS: " + ECTSPoints.ToString();

@@ -14,6 +14,10 @@ public class GenerateNewLevel
     {
         _destroyer.DestroyObjects(_ects.listOfInstances);
         _destroyer.DestroyObjects(_obstacles.listOfInstances);
+        _ects.listOfInstances.Clear();
+        _obstacles.listOfInstances.Clear();
+        _ects.listOfInstances = new List<GameObject>();
+        _obstacles.listOfInstances = new List<GameObject>();
     }
 
     public void ChangeMainObstacleModel()
