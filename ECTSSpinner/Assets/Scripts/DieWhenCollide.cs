@@ -21,6 +21,7 @@ public class DieWhenCollide: MonoBehaviour
             //       position of the ball even if it is destroyed
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
+            GenerateNewLevel.levelNumber = 0;
         }
     }
 
