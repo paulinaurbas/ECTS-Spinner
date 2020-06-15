@@ -84,10 +84,12 @@ public class GenerateObstacles : IGenerator
             float posX = radius * (float)Math.Cos(angle);
             float posY = radius * (float)Math.Sin(angle);
 
-            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(posX, posY, posZ), Quaternion.identity);
+            var newObstacle = GameObject.Instantiate(baseObject, new Vector3(0, 0, 0), Quaternion.identity);
 
+            newObstacle.transform.RotateAround(new Vector3(0, 0, 1), angle - 90);
+            newObstacle.transform.position = new Vector3(posX, posY, posZ);
             newObstacle.transform.parent = cylinder.transform;
-            //newObstacle.transform.RotateAround(new Vector3(0, 0, 0), new Vector3(0, 0, 1), angle);
+
             newObstacle.transform.localScale = AdjustScale(); 
             
             
