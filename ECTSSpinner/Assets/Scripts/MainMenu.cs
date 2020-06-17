@@ -8,7 +8,15 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-public void QuitGame()
+    public void PlayAgainGameLooseGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    public void PlayAgainGameWinGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+    public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();

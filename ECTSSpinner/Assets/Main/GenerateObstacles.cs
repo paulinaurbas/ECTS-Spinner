@@ -98,7 +98,7 @@ public class GenerateObstacles : IGenerator
             //Prevent cubes from spawning inside eachother
             if (player.GetComponent<CapsuleCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds))
             {
-                destroyer.DestroyObject(newObstacle);
+                newObstacle.SetActive(false);
                 obstacleIntersects = true;
             }
 

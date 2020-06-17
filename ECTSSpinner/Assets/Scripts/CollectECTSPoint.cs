@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CollectECTSPoint : MonoBehaviour
 {
 
-    public int ECTSPoints;
+    public static int ECTSPoints;
     public Text ECTSPointsText;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class CollectECTSPoint : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("ECTS"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
             // TODO: Add fireworks effects 
             ECTSPoints++;
             ECTSPointsText.text = "ECTS: " + ECTSPoints.ToString();
