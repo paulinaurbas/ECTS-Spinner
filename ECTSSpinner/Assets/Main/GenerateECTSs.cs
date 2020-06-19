@@ -34,24 +34,47 @@ public class GenerateECTSs : IGenerator
     }
     // Start is called before the first frame update
 
+    private void RotateWithoutChildren(GameObject obj, Vector3 rotation, double angle)
+    {
+        List<Transform> listOfKids = new List<Transform>();
+
+        foreach(Transform child in obj.transform)
+        {
+            child.transform.parent = null;
+            listOfKids.Add(child);
+        }
+
+        obj.transform.Rotate(rotation, (float)angle);
+
+        foreach (Transform child in listOfKids)
+            child.transform.parent = obj.transform;
+    }
+
     public void InitializeGameObjects()
     {
-        numberOfInstances = _obstacles.numberOfInstances / 10;
+        numberOfInstances = _obstacles.numberOfInstances / 5;
         cylinderBounds = cylinder.GetComponent<MeshCollider>().bounds;
 
-        radius = (cylinderBounds.max.x - cylinderBounds.min.x) / 2;
-        _range = (cylinderBounds.max.z - cylinderBounds.min.z - 20) / numberOfInstances;
+        radius = 7.55f;//(cylinderBounds.max.x - cylinderBounds.min.x) / 2;
+        var cylinderLength =  (cylinderBounds.max.z - cylinderBounds.min.z) / 2;
+
+        _range = cylinderLength / numberOfInstances;
 
         for (int i = 0; i < numberOfInstances; i++)
         {
 
             float angle = UnityEngine.Random.Range(0, 360);
-            float posZ = _range * i + cylinderBounds.min.z + 10;
+            float posZ = _range * i + cylinderBounds.min.z;
             float posX = radius * (float)Math.Cos(angle);
             float posY = radius * (float)Math.Sin(angle);
 
-            var newECTS = GameObject.Instantiate(baseObject, new Vector3(posX, posY, posZ), Quaternion.AngleAxis(angle, new Vector3(0, 0, 1)));
+            var newECTS = GameObject.Instantiate(baseObject, new Vector3(0, 0, 2), Quaternion.identity);
+
+            newECTS.transform.Rotate(new Vector3(0, 0, 1), angle - 90);
+
+            newECTS.transform.position = new Vector3(posX, posY, posZ);
             newECTS.transform.parent = cylinder.transform;
+
             newECTS.transform.localScale = new Vector3(0.1f, 0.07f, 0.0015f);
             newECTS.name = "ECTSPoint_" + i.ToString();
             newECTS.tag = "ECTS";
@@ -64,9 +87,6 @@ public class GenerateECTSs : IGenerator
                 if (item.GetComponent<BoxCollider>().bounds.Intersects(newECTS.GetComponent<CapsuleCollider>().bounds))
                 {
                     item.SetActive(false);
-                    /* _obstacles.listOfInstances.RemoveAt(_obstacles.listOfInstances.IndexOf(item));
-
-                     destroyer.DestroyObject(item); */
                 }
             }
         }

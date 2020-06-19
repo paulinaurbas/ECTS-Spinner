@@ -22,7 +22,7 @@ public class CollectECTSPoint : MonoBehaviour
             collision.gameObject.SetActive(false);
             // TODO: Add fireworks effects 
             ECTSPoints++;
-            ECTSPointsText.text = "POINTS: " + ECTSPoints.ToString();
+            ECTSPointsText.text = "ECTS: " + ECTSPoints.ToString();
             Debug.Log("ECTSPoints = " + ECTSPoints);
         }
     }

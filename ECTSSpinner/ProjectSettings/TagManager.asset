@@ -9,6 +9,7 @@ TagManager:
   - ECTS
   - Background
   - Arena
+  - DeadZone
   layers:
   - Default
   - TransparentFX

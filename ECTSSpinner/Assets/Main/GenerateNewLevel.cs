@@ -9,7 +9,6 @@ public class GenerateNewLevel
     private GenerateObstacles _obstacles = GenerateObstacles.Instance;
     private Destroyer _destroyer = new Destroyer();
     public static int levelNumber = 0;
-   
 
     public void DestroyAllGameObjects() //I AM THE CATACLYSM
     {
@@ -59,7 +58,7 @@ public class GenerateNewLevel
     public void GenerateNextLevel() //I bring life, and hope
     {
 
-        _obstacles.numberOfInstances += 25;
+        _obstacles.numberOfInstances += 5;
         ChangeMainObstacleModel();
         _obstacles.InitializeGameObjects();
 
@@ -69,6 +68,6 @@ public class GenerateNewLevel
     public void MovePlayerToStart()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = new Vector3(-0.02f, 7.761f, -107.12f);
+        player.transform.position = new Vector3(-0.02f, 7.761f, -400f);
     }
 }
