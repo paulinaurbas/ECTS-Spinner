@@ -5,7 +5,7 @@ using System.Collections;
 public class SimpleMove : MonoBehaviour
 {
     private Rigidbody rigidBody;
-    public float horizontalSpeed = 0.0001f;
+    public float horizontalSpeed = 0.5f;
     public float verticalSpeed = 1.0f;
     private GameObject _cylinder;
 

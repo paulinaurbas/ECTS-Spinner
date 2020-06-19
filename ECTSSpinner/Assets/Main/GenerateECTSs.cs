@@ -52,17 +52,19 @@ public class GenerateECTSs : IGenerator
 
     public void InitializeGameObjects()
     {
-        numberOfInstances = _obstacles.numberOfInstances / 10;
+        numberOfInstances = _obstacles.numberOfInstances / 5;
         cylinderBounds = cylinder.GetComponent<MeshCollider>().bounds;
 
         radius = 7.55f;//(cylinderBounds.max.x - cylinderBounds.min.x) / 2;
-        _range = (cylinderBounds.max.z - cylinderBounds.min.z - 20) / numberOfInstances;
+        var cylinderLength =  (cylinderBounds.max.z - cylinderBounds.min.z) / 2;
+
+        _range = cylinderLength / numberOfInstances;
 
         for (int i = 0; i < numberOfInstances; i++)
         {
 
             float angle = UnityEngine.Random.Range(0, 360);
-            float posZ = _range * i + cylinderBounds.min.z + 10;
+            float posZ = _range * i + cylinderBounds.min.z;
             float posX = radius * (float)Math.Cos(angle);
             float posY = radius * (float)Math.Sin(angle);
 
