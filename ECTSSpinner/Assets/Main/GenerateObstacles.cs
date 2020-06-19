@@ -80,7 +80,7 @@ public class GenerateObstacles : IGenerator
             bool obstacleIntersects = false;
 
             float angle = UnityEngine.Random.Range(0, 360);
-            float posZ = UnityEngine.Random.Range(cylinderBounds.min.z, 0);
+            float posZ = UnityEngine.Random.Range(-320f, 0);
             float posX = radius * (float)Math.Cos(angle);
             float posY = radius * (float)Math.Sin(angle);
 
@@ -96,7 +96,7 @@ public class GenerateObstacles : IGenerator
             newObstacle.name = "obstacle_" + i.ToString();
 
             //Prevent cubes from spawning in player's dead zone
-            var deadZone = GameObject.FindGameObjectWithTag("DeadZone");
+            //var deadZone = GameObject.FindGameObjectWithTag("DeadZone");
             if (player.GetComponent<CapsuleCollider>().bounds.Intersects(newObstacle.GetComponent<BoxCollider>().bounds))
             {
                 newObstacle.SetActive(false);
