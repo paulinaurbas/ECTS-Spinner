@@ -1,13 +1,19 @@
 # ECTS Spinner
-University project from Computer Graphics. 
+A mobile game for the Android platform created in the Unity environment. The game consists in controlling an object moving forward in a way to avoid obstacles. The facility is controlled by tilting the phone "like a steering wheel". During the game it is possible to collect points that allow you to unlock subsequent levels.
+
+# Requirements
+- The minimum version of Android on a mobile device is: 4.1 "Jelly Bean". 
+- The highest version available for the game is Android 10.0 "Q"
+- The mobile device must have an accelerometer
+
 ## Technology 
  - Unity
  - C#
  - Android Studio IDE
+ 
  ## Platform 
  Android 
- ## Testing 
- To test app on your device make sure you have installed Unity Remote 5 on your phone and Android studio on your computer. 
+ 
  ## Team
  - Michał Herjan
  - Franek Pogodziński
