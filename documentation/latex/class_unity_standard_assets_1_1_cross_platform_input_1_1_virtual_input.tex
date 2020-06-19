@@ -1,0 +1,287 @@
+\doxysection{Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input Class Reference}
+\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input}\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+Inheritance diagram for Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.284404cm]{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ Axis\+Exists} (string name)
+\item 
+bool \textbf{ Button\+Exists} (string name)
+\item 
+void \textbf{ Register\+Virtual\+Axis} (\textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis} axis)
+\item 
+void \textbf{ Register\+Virtual\+Button} (\textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Button} button)
+\item 
+void \textbf{ Un\+Register\+Virtual\+Axis} (string name)
+\item 
+void \textbf{ Un\+Register\+Virtual\+Button} (string name)
+\item 
+\textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis} \textbf{ Virtual\+Axis\+Reference} (string name)
+\item 
+void \textbf{ Set\+Virtual\+Mouse\+PositionX} (float f)
+\item 
+void \textbf{ Set\+Virtual\+Mouse\+PositionY} (float f)
+\item 
+void \textbf{ Set\+Virtual\+Mouse\+PositionZ} (float f)
+\item 
+abstract float \textbf{ Get\+Axis} (string name, bool raw)
+\item 
+abstract bool \textbf{ Get\+Button} (string name)
+\item 
+abstract bool \textbf{ Get\+Button\+Down} (string name)
+\item 
+abstract bool \textbf{ Get\+Button\+Up} (string name)
+\item 
+abstract void \textbf{ Set\+Button\+Down} (string name)
+\item 
+abstract void \textbf{ Set\+Button\+Up} (string name)
+\item 
+abstract void \textbf{ Set\+Axis\+Positive} (string name)
+\item 
+abstract void \textbf{ Set\+Axis\+Negative} (string name)
+\item 
+abstract void \textbf{ Set\+Axis\+Zero} (string name)
+\item 
+abstract void \textbf{ Set\+Axis} (string name, float value)
+\item 
+abstract Vector3 \textbf{ Mouse\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, \textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis} $>$ \textbf{ m\+\_\+\+Virtual\+Axes}
+\item 
+Dictionary$<$ string, \textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Button} $>$ \textbf{ m\+\_\+\+Virtual\+Buttons}
+\item 
+List$<$ string $>$ \textbf{ m\+\_\+\+Always\+Use\+Virtual} = new List$<$string$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \textbf{ virtual\+Mouse\+Position}\hspace{0.3cm}{\ttfamily  [get]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_ab5744afc94aa095e2f8149bc44920360}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!AxisExists@{AxisExists}}
+\index{AxisExists@{AxisExists}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{AxisExists()}
+{\footnotesize\ttfamily bool Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Axis\+Exists (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a5d70deed210f91fc144d9a62cab4c535}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!ButtonExists@{ButtonExists}}
+\index{ButtonExists@{ButtonExists}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{ButtonExists()}
+{\footnotesize\ttfamily bool Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Button\+Exists (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_acc3057ff75396039d6b27f518f2c0806}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!GetAxis@{GetAxis}}
+\index{GetAxis@{GetAxis}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{GetAxis()}
+{\footnotesize\ttfamily abstract float Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Get\+Axis (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{bool}]{raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a021064294312ef214f3219f87bfd10b8}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a810b166597117356c6be8a77c5f60b87}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a74f82647d8ca8e17d4f89d94c19a891c}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!GetButton@{GetButton}}
+\index{GetButton@{GetButton}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{GetButton()}
+{\footnotesize\ttfamily abstract bool Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Get\+Button (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a02d4acfbb8bac5f80d9d7ce07fd72dd0}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_abae28eb1ca17a873cc6eed480085e0fb}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_ae7cfad86082449cfd335b337450241a7}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!GetButtonDown@{GetButtonDown}}
+\index{GetButtonDown@{GetButtonDown}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{GetButtonDown()}
+{\footnotesize\ttfamily abstract bool Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Get\+Button\+Down (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a8bf6e39ee25d772a7ee72ab9ea04b50b}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a6017fdff87802b504aafd55969807ae7}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a91fa118a5b6f1e66d6551a385b664d07}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!GetButtonUp@{GetButtonUp}}
+\index{GetButtonUp@{GetButtonUp}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{GetButtonUp()}
+{\footnotesize\ttfamily abstract bool Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Get\+Button\+Up (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_aa8563558050d14bdec8b9e1ceae8464c}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_af86223b3eb0b0d81c794dbbee4f1c8fa}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a204a66311a817e49ca0f137a2aa584d2}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!MousePosition@{MousePosition}}
+\index{MousePosition@{MousePosition}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{MousePosition()}
+{\footnotesize\ttfamily abstract Vector3 Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_ab85ef8caaf3f7346d06f75c22cb98b73}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a18dc43a362728639b76870ef6e141576}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_aa530866e5a5597cee5f56a80b5074914}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!RegisterVirtualAxis@{RegisterVirtualAxis}}
+\index{RegisterVirtualAxis@{RegisterVirtualAxis}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{RegisterVirtualAxis()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Register\+Virtual\+Axis (\begin{DoxyParamCaption}\item[{\textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis}}]{axis }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a6073a4d0dc59419c956d3454217f07c3}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!RegisterVirtualButton@{RegisterVirtualButton}}
+\index{RegisterVirtualButton@{RegisterVirtualButton}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{RegisterVirtualButton()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Register\+Virtual\+Button (\begin{DoxyParamCaption}\item[{\textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Button}}]{button }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_ab0bef7a37bb6e5962d7d2dffea4d083f}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetAxis@{SetAxis}}
+\index{SetAxis@{SetAxis}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetAxis()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Axis (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a62844904d698bdeb2a5305d3ddd1a3f0}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a1597873a4a9309a388a3e9239e2632d7}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_ad3af2e79617bf02ba1d9dd51162a404a}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetAxisNegative@{SetAxisNegative}}
+\index{SetAxisNegative@{SetAxisNegative}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetAxisNegative()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Axis\+Negative (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_aa80b3a8e7565ebc452fe3d304dba52a0}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_ab657b9df7411909f1319c7ecf918689c}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_abd4920b94dff2454bac3daa6c355c71d}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetAxisPositive@{SetAxisPositive}}
+\index{SetAxisPositive@{SetAxisPositive}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetAxisPositive()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Axis\+Positive (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a0efb94b84448d95df8004db34a1bfc49}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a045d6d8118178037cca1552c087f4598}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_ad2b9d1001a194fd34c26086a39e25849}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetAxisZero@{SetAxisZero}}
+\index{SetAxisZero@{SetAxisZero}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetAxisZero()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Axis\+Zero (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a4a4fe09e6913d9a1396d8efac1c166a5}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a94bfadda9797a34c9d66b30dd6449c2c}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_aff10ff821f722ce82e9a48b5406e836e}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetButtonDown@{SetButtonDown}}
+\index{SetButtonDown@{SetButtonDown}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetButtonDown()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Button\+Down (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a2736a0b9d786fa766fbce1379814b58d}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_a56ecd8af7bf3e3d66fd1a171ad59343b}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a03e5f4e3650d7322569b5b39f53a8522}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetButtonUp@{SetButtonUp}}
+\index{SetButtonUp@{SetButtonUp}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetButtonUp()}
+{\footnotesize\ttfamily abstract void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Button\+Up (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Mobile\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_mobile_input_a04b2283a162114fadb2a3e21120d1907}, and \textbf{ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Platform\+Specific.\+Standalone\+Input} \doxyref{}{p.}{class_unity_standard_assets_1_1_cross_platform_input_1_1_platform_specific_1_1_standalone_input_acc7c93e48c46057a72b426b2bc9b9f4e}.
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a7eec67e6da5890b0d14ec6e9f1adb43d}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetVirtualMousePositionX@{SetVirtualMousePositionX}}
+\index{SetVirtualMousePositionX@{SetVirtualMousePositionX}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetVirtualMousePositionX()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Virtual\+Mouse\+PositionX (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_acf54ec0ee9e7e54bb603538e49ff3d61}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetVirtualMousePositionY@{SetVirtualMousePositionY}}
+\index{SetVirtualMousePositionY@{SetVirtualMousePositionY}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetVirtualMousePositionY()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Virtual\+Mouse\+PositionY (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a2f5097b2d04f3af6db5a1bad128fbaa1}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!SetVirtualMousePositionZ@{SetVirtualMousePositionZ}}
+\index{SetVirtualMousePositionZ@{SetVirtualMousePositionZ}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{SetVirtualMousePositionZ()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Set\+Virtual\+Mouse\+PositionZ (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_a97ed9f03493198eab55eb47e9fa77801}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!UnRegisterVirtualAxis@{UnRegisterVirtualAxis}}
+\index{UnRegisterVirtualAxis@{UnRegisterVirtualAxis}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{UnRegisterVirtualAxis()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Un\+Register\+Virtual\+Axis (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_aff127b39add01c4d34a6b5a396d42ea1}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!UnRegisterVirtualButton@{UnRegisterVirtualButton}}
+\index{UnRegisterVirtualButton@{UnRegisterVirtualButton}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{UnRegisterVirtualButton()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Un\+Register\+Virtual\+Button (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_af19a8841bf61b55baa6d791a82f67cdd}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!VirtualAxisReference@{VirtualAxisReference}}
+\index{VirtualAxisReference@{VirtualAxisReference}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{VirtualAxisReference()}
+{\footnotesize\ttfamily \textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis} Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+Virtual\+Axis\+Reference (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_abe7ea4edf0c3003a5a19969530cd855e}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!m\_AlwaysUseVirtual@{m\_AlwaysUseVirtual}}
+\index{m\_AlwaysUseVirtual@{m\_AlwaysUseVirtual}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{m\_AlwaysUseVirtual}
+{\footnotesize\ttfamily List$<$string$>$ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+m\+\_\+\+Always\+Use\+Virtual = new List$<$string$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_abb0e84e118d732a626c67adb78b26eff}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!m\_VirtualAxes@{m\_VirtualAxes}}
+\index{m\_VirtualAxes@{m\_VirtualAxes}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{m\_VirtualAxes}
+{\footnotesize\ttfamily Dictionary$<$string, \textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Axis}$>$ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+m\+\_\+\+Virtual\+Axes\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            \textcolor{keyword}{new} Dictionary<string, CrossPlatformInputManager.VirtualAxis>()}
+
+\end{DoxyCode}
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_adbc824b5db08f6929aee3be874bc76cb}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!m\_VirtualButtons@{m\_VirtualButtons}}
+\index{m\_VirtualButtons@{m\_VirtualButtons}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{m\_VirtualButtons}
+{\footnotesize\ttfamily Dictionary$<$string, \textbf{ Cross\+Platform\+Input\+Manager.\+Virtual\+Button}$>$ Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+m\+\_\+\+Virtual\+Buttons\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            \textcolor{keyword}{new} Dictionary<string, CrossPlatformInputManager.VirtualButton>()}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_unity_standard_assets_1_1_cross_platform_input_1_1_virtual_input_afa1db3ff31769359a2ba5de88d860e45}} 
+\index{UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}!virtualMousePosition@{virtualMousePosition}}
+\index{virtualMousePosition@{virtualMousePosition}!UnityStandardAssets.CrossPlatformInput.VirtualInput@{UnityStandardAssets.CrossPlatformInput.VirtualInput}}
+\doxysubsubsection{virtualMousePosition}
+{\footnotesize\ttfamily Vector3 Unity\+Standard\+Assets.\+Cross\+Platform\+Input.\+Virtual\+Input.\+virtual\+Mouse\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Standard Assets/\+Cross\+Platform\+Input/\+Scripts/\textbf{ Virtual\+Input.\+cs}\end{DoxyCompactItemize}

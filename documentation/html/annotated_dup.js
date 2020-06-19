@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "GitHub", "namespace_git_hub.html", "namespace_git_hub" ],
+    [ "UnityStandardAssets", "namespace_unity_standard_assets.html", "namespace_unity_standard_assets" ],
+    [ "Accelometer", "class_accelometer.html", "class_accelometer" ],
+    [ "AlphaButtonClickMask", "class_alpha_button_click_mask.html", "class_alpha_button_click_mask" ],
+    [ "CollectECTSPoint", "class_collect_e_c_t_s_point.html", "class_collect_e_c_t_s_point" ],
+    [ "CollectedECTS", "class_collected_e_c_t_s.html", "class_collected_e_c_t_s" ],
+    [ "Destroyer", "class_destroyer.html", "class_destroyer" ],
+    [ "DieWhenCollide", "class_die_when_collide.html", null ],
+    [ "EventSystemChecker", "class_event_system_checker.html", null ],
+    [ "FinishLevel", "class_finish_level.html", null ],
+    [ "ForcedReset", "class_forced_reset.html", null ],
+    [ "GenerateECTSs", "class_generate_e_c_t_ss.html", "class_generate_e_c_t_ss" ],
+    [ "GenerateNewLevel", "class_generate_new_level.html", "class_generate_new_level" ],
+    [ "GenerateObstacles", "class_generate_obstacles.html", "class_generate_obstacles" ],
+    [ "IGenerator", "interface_i_generator.html", "interface_i_generator" ],
+    [ "MainMenu", "class_main_menu.html", "class_main_menu" ],
+    [ "Rotate", "class_rotate.html", "class_rotate" ],
+    [ "SimpleMove", "class_simple_move.html", "class_simple_move" ],
+    [ "SpawnECTSs", "class_spawn_e_c_t_ss.html", "class_spawn_e_c_t_ss" ],
+    [ "SpawnObstacles", "class_spawn_obstacles.html", "class_spawn_obstacles" ],
+    [ "WaterEditorUtility", "class_water_editor_utility.html", null ],
+    [ "YourScore", "class_your_score.html", "class_your_score" ]
+];

@@ -1,0 +1,74 @@
+\doxysection{Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob Class Reference}
+\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob}\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Setup} (Camera \textbf{ camera}, float bob\+Base\+Interval)
+\item 
+Vector3 \textbf{ Do\+Head\+Bob} (float \textbf{ speed})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ Horizontal\+Bob\+Range} = 0.\+33f
+\item 
+float \textbf{ Vertical\+Bob\+Range} = 0.\+33f
+\item 
+Animation\+Curve \textbf{ Bobcurve}
+\item 
+float \textbf{ Verticalto\+Horizontal\+Ratio} = 1f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_a7fd3c545ac32c1b10ad2f9ccdfbd35e4}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!DoHeadBob@{DoHeadBob}}
+\index{DoHeadBob@{DoHeadBob}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{DoHeadBob()}
+{\footnotesize\ttfamily Vector3 Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Do\+Head\+Bob (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_a3b1649ee246f1a06344616af46499348}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{Setup()}
+{\footnotesize\ttfamily void Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Setup (\begin{DoxyParamCaption}\item[{Camera}]{camera,  }\item[{float}]{bob\+Base\+Interval }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_a11a0684cea298938d69397023f88b0ae}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!Bobcurve@{Bobcurve}}
+\index{Bobcurve@{Bobcurve}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{Bobcurve}
+{\footnotesize\ttfamily Animation\+Curve Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Bobcurve}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} AnimationCurve(\textcolor{keyword}{new} Keyframe(0f, 0f), \textcolor{keyword}{new} Keyframe(0.5f, 1f),}
+\DoxyCodeLine{                                                            \textcolor{keyword}{new} Keyframe(1f, 0f), \textcolor{keyword}{new} Keyframe(1.5f, -\/1f),}
+\DoxyCodeLine{                                                            \textcolor{keyword}{new} Keyframe(2f, 0f))}
+
+\end{DoxyCode}
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_a4a062657e88865ddd6aba8e4c2c32039}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!HorizontalBobRange@{HorizontalBobRange}}
+\index{HorizontalBobRange@{HorizontalBobRange}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{HorizontalBobRange}
+{\footnotesize\ttfamily float Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Horizontal\+Bob\+Range = 0.\+33f}
+
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_a2637563a3238c5a79883cf4a7dce659d}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!VerticalBobRange@{VerticalBobRange}}
+\index{VerticalBobRange@{VerticalBobRange}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{VerticalBobRange}
+{\footnotesize\ttfamily float Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Vertical\+Bob\+Range = 0.\+33f}
+
+\mbox{\label{class_unity_standard_assets_1_1_utility_1_1_curve_controlled_bob_aa3953c97210c97fbc387ab06fa9ae0ee}} 
+\index{UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}!VerticaltoHorizontalRatio@{VerticaltoHorizontalRatio}}
+\index{VerticaltoHorizontalRatio@{VerticaltoHorizontalRatio}!UnityStandardAssets.Utility.CurveControlledBob@{UnityStandardAssets.Utility.CurveControlledBob}}
+\doxysubsubsection{VerticaltoHorizontalRatio}
+{\footnotesize\ttfamily float Unity\+Standard\+Assets.\+Utility.\+Curve\+Controlled\+Bob.\+Verticalto\+Horizontal\+Ratio = 1f}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Standard Assets/\+Utility/\textbf{ Curve\+Controlled\+Bob.\+cs}\end{DoxyCompactItemize}
